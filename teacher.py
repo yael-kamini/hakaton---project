@@ -1,19 +1,17 @@
 
 
-def picked_teacher():
+def picked_teacher(num_students,student_name,subject_for_tutoring,students_grade):
     lessons_dict={}
-    num_students=int(input("number of students"))
-    #function that gets num of students from input
+
     for i in range(num_students):
-        student_name=input("student_name")
-        #screen input
-
-        subject_for_tutoring=input("subject for tutoring")
-        #screen function
-
-        students_grade=input("students_grade")
-        #screen input
 
         lessons_dict.update({student_name:(subject_for_tutoring,students_grade)})
-        print(lessons_dict)
+
+
+tutors=[]
+def picked_tutor(subject,tutor_age,tutor_name, day_for_tutoring,hour_for_tutoring):
+    tutor_info = {"subject":subject,"tutor_age":tutor_age,"tutor_name":tutor_name,"day_for_tutoring":day_for_tutoring,"hour_for_tutoring":hour_for_tutoring
+    tutors.append{t
+
+
 picked_teacher()
