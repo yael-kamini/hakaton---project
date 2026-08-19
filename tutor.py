@@ -1,4 +1,4 @@
-
+#
 # import pygame_widgets
 # import pygame
 # from pygame_widgets.textbox import TextBox
@@ -7,7 +7,6 @@
 #     # Get text in the textbox
 #     print(lesson.getText())
 #
-# #255,204,255
 # pygame.init()
 # win = pygame.display.set_mode((1000, 600))
 #
@@ -28,9 +27,9 @@
 #
 #     pygame_widgets.update(events)
 #     pygame.display.update()
-
 #
-# import pygame
+#
+# # import pygame
 #
 # import pygame_widgets
 # from pygame_widgets.button import Button
@@ -99,24 +98,27 @@
 #
 #     output.setText(slider.getValue())
 
-
+import consts
 import pygame_widgets
 import pygame
 from pygame_widgets.button import Button
 from pygame_widgets.dropdown import Dropdown
+from pygame_widgets.textbox import TextBox
+
 
 pygame.init()
-win = pygame.display.set_mode((400, 280))
-
+win = pygame.display.set_mode((1200, 840))
+def output():
+    # Get text in the textbox
+    print(lesson.getText())
 dropdown = Dropdown(
     win, 120, 10, 100, 50, name='Select lesson',
-    choices=[
-        'science',
-        'math',
-        'english',
-    ],
-    borderRadius=3, colour=pygame.Color('pink'), values=[1, 2, 'lesson selected'], direction='down', textHAlign='left'
+    choices=consts.SUBJECTS,
+    borderRadius=3, colour=pygame.Color('pink'), values=['lesson selected','lesson selected','lesson selected','lesson selected'], direction='down', textHAlign='left'
 )
+lesson = TextBox(win, 100, 100, 200, 50, fontSize=30,
+                  borderColour=(255,204,255), textColour=(0, 0, 0),
+                  onSubmit=output, radius=5, borderThickness=5)
 
 
 def print_value():
@@ -126,12 +128,13 @@ def print_value():
 button = Button(
     win, 10, 10, 100, 50, text='submit', fontSize=30,
     margin=20, inactiveColour=(255,204,255), pressedColour=(0, 255, 0),
-    radius=5, onClick=print_value, font=pygame.font.SysFont('calibri', 10),
+    radius=5, onClick=print_value, font=pygame.font.SysFont('arial', 20),
     textVAlign='bottom'
 )
 
 run = True
 while run:
+
     events = pygame.event.get()
     for event in events:
         if event.type == pygame.QUIT:
@@ -143,3 +146,4 @@ while run:
 
     pygame_widgets.update(events)
     pygame.display.update()
+
