@@ -1,0 +1,23 @@
+DAYS = {'SUNDAY': 1
+        , 'MONDAY': 2
+        , 'TUESDAY': 3
+        , 'WEDNESDAY': 4
+        , "THURSDAY": 5
+        , "FRIDAY": 6
+    }
+
+SUBJECTS = ['ENGLISH' , 'MATH' , 'SCIENCE' , 'HEBREW']
+
+
+STARTING_HOUR = 8
+HOURS_PER_DAY = 6
+LIMIT_OF_LESSON = 3
+TIME_PER_LESSON = 1
+HEIGHT_OF_SCREEN = 600
+WIDTH_OF_SCREEN = 1000
+
+PINK = (255 , 204 , 255)
+SECOND_PINK = (255 , 0 , 102)
+BLACK = (0,0,0)
+WHITE = (255 , 255 , 255)
+
