@@ -1,3 +1,4 @@
+from tutor import print_value
 
 
 def picked_teacher(num_students,student_name,subject_for_tutoring,students_grade):
@@ -10,8 +11,9 @@ def picked_teacher(num_students,student_name,subject_for_tutoring,students_grade
 
 tutors=[]
 def picked_tutor(subject,tutor_age,tutor_name, day_for_tutoring,hour_for_tutoring):
-    tutor_info = {"subject":subject,"tutor_age":tutor_age,"tutor_name":tutor_name,"day_for_tutoring":day_for_tutoring,"hour_for_tutoring":hour_for_tutoring
-    tutors.append{t
+    global tutors
+    tutor_info = {"subject":subject,"tutor_age":tutor_age,"tutor_name":tutor_name,"day_for_tutoring":day_for_tutoring,"hour_for_tutoring":hour_for_tutoring}
+    tutors.append(tutor_info)
+    
 
 
-picked_teacher()
