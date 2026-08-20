@@ -1,0 +1,45 @@
+
+import pygame
+import pygame_widgets
+from pygame_widgets.button import ButtonArray
+import consts
+
+pygame.init()
+win = pygame.display.set_mode((consts.WIDTH_OF_SCREEN, consts.HEIGHT_OF_SCREEN))
+
+
+buttonArray = ButtonArray(
+    win,
+    50,
+    70,
+    900,
+    550,
+    (1, 2),
+    border=100,
+    texts=('tutor', 'teacher'),fontSize=100,colour=(255 , 204 , 255), font=pygame.font.SysFont('arial', 100),
+    onClicks=(lambda: print("tutor"), lambda: print('teacher'))
+)
+
+run = True
+while run:
+    win.fill((255, 255, 255))
+    font = pygame.font.SysFont("Arial", 50)
+    txtsurf = font.render("welcome to the kids teaching kids program!", True, (0, 0, 0))
+    win.blit(txtsurf, (120, 10))
+    events = pygame.event.get()
+
+    for event in events:
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            run = False
+            quit()
+
+    pygame_widgets.update(events)
+    pygame.display.update()
+
+
+
+
+
+
+
